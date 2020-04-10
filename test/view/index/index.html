@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>登录页面</title>
+</head>
+<body>
+	<h3><a href="#">登录</a>|<a href="\test\register\index">注册</a></h3>
+<form action="{:url('/test/index/login')}" method="post">
+	<div>邮箱</div>
+	<div><input type="email" name="email"></div>
+	<div>密码</div>
+	<div><input type="password" name="password"></div>
+	<div>验证码</div>
+	<div><input type="captcha" name="captcha">
+		 <img src="{:captcha_src()}" alt="captcha" style="height: 40px" onclick="this.src='{:captcha_src()}?'+Math.random();">
+	</div>
+	<div><input type="submit" name="" value="登录"></div>
+</form>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{layout name="layout"}
+<h3>修改信息</h3>
+<form action="/test/user/update" method="post">
+	<input type="hidden" name="id" value="{$user.id}">
+	<div>姓名:</div> 
+	<div><input type="text" name="name" value="{$user.name}"></div>
+	<input type="submit" name="" value="提交">
+</form>

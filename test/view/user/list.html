@@ -1,0 +1,26 @@
+{layout name="layout"}
+	<div class="row">
+        <div class="col-md-12">
+			<table border="1" class="table table-hover table-bordered">
+				<tr class="info">
+					<td>ID</td>
+					<td>用户名</td>
+					<td>邮箱</td>
+					<td>编辑</td>
+				</tr>
+				{volist name="list" id="vo"}
+				<tr>
+					<td>{$vo.id}</td>
+					<td>{$vo.name}</td>
+					<td>{$vo.email}</td>
+					<td>
+						<a href="/test/user/edit?id={$vo.id}">修改</a>
+						<a href="/test/user/delete?id={$vo.id}">删除</a>
+					</td> 
+				</tr>
+				{/volist}
+			</table>
+
+		</div>
+    </div>
+{$page}

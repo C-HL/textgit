@@ -1,0 +1,30 @@
+{layout name="layout"}
+	<div class="row">
+		<a href="/test/user/add">添加留言</a>
+        <div class="col-md-12">
+			<table border="1" class="table table-hover table-bordered">
+				<tr class="info">
+					<td>用户ID</td>
+					<!-- <td>用户名</td> -->
+					<td>标题</td>
+					<td>内容</td>
+					<td>创建时间</td>
+					<td>编辑</td>
+				</tr>
+				{volist name="list" id="vo"}
+				<tr>
+					<td>{$vo.user_id}</td>
+					<td>{$vo.title}</td>
+					<td>{$vo.content}</td>
+					<td>{$vo.create_time}</td>
+					<td>
+						<a href="/test/test/edit?id={$vo.id}">修改</a>
+						<a href="/test/test/delete?id={$vo.id}">删除</a>
+					</td>
+				</tr>
+				{/volist}
+			</table>
+
+		</div>
+    </div>
+{$page}
